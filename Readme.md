@@ -12,6 +12,7 @@ This project represents my exploration into building RESTful APIs using Python a
 - Working with data persistence
 
 Throughout this project, I've gained valuable hands-on experience with these concepts and more. While there's always room for improvement, I'm proud of what I've built so far!
+
 ## 🌟 Overview
 The Random Name API accepts a user-defined starting letter and returns a randomly generated name beginning with that letter. It's lightweight, fast, and easy to integrate into various projects.
 ### 🚀 Features
@@ -31,7 +32,8 @@ Prerequisites
 - FastAPI
 - Uvicorn
 
-### Setup
+### 🚀 Quick Start
+### Run Locally
 
 Clone the repository:
         
@@ -65,6 +67,14 @@ Open your browser and navigate to:
 
     API: http://127.0.0.1:8000/
     Documentation: http://127.0.0.1:8000/docs
+
+## 🌐 Live API
+
+The API is live and can be accessed at:
+- API: https://random-nameapi.onrender.com
+- Documentation: https://random-nameapi.onrender.com/docs
+
+Feel free to try it out using the examples below!
 
 ## API Usage
 ### 📋 API Endpoints
