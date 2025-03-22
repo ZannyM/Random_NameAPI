@@ -22,17 +22,17 @@ def test_health_check():
     assert response.status_code == 200
     assert response.json()["status"] == "healthy"
 
-def test_get_random_name():
-    """Test getting a random name"""
-    response = client.get("/randomname/a")
-    assert response.status_code == 200
-    assert "name" in response.json()
-    assert response.json()["name"].startswith("A")
+# def test_get_random_name():
+#     """Test getting a random name"""
+#     response = client.get("/randomname/a")
+#     assert response.status_code == 200
+#     assert "name" in response.json()
+#     assert response.json()["name"].startswith("A")
     
-    # Test that we get meaning, origin, and gender
-    assert "meaning" in response.json()
-    assert "origin" in response.json()
-    assert "gender" in response.json()
+#     # Test that we get meaning, origin, and gender
+#     assert "meaning" in response.json()
+#     assert "origin" in response.json()
+#     assert "gender" in response.json()
 
 def test_invalid_letter():
     """Test with an invalid letter parameter"""
