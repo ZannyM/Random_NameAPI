@@ -24,8 +24,53 @@ The Random Name API accepts a user-defined starting letter and returns a randoml
 - Simple Endpoints: Designed with minimal setup for ease of use
 - OpenAPI Documentation: Fully documented API with Swagger UI
 
+### 🚀 Installation & Usage
+Prerequisites
+
+- Python 3.7+
+- FastAPI
+- Uvicorn
+
+### Setup
+
+Clone the repository:
+        
+        git clone https://github.com/yourusername/random-name-api.git
+        cd random-name-api
+
+Create a virtual environment: 
+
+        python -m venv .venv
+
+        # On Windows (Command Prompt):
+        .venv\Scripts\activate
+
+        # On Windows (Git Bash):
+        source .venv/Scripts/activate
+
+        # On macOS/Linux:
+        source .venv/bin/activate
+
+Install dependencies:
+    
+        pip install -r requirements.txt
+
+Run the server:
+
+        python run.py
+        # OR
+        uvicorn myapi:app --reload
+
+Open your browser and navigate to:
+
+    API: http://127.0.0.1:8000/
+    Documentation: http://127.0.0.1:8000/docs
+
+## API Usage
 ### 📋 API Endpoints
-    GET /randomname/{letter}
+
+        GET /randomname/{letter}
+
 Returns one random name starting with the specified letter.
 ### Path Parameters
 
@@ -81,6 +126,13 @@ python
     response = requests.get(api_url)
     print(response.json())
     
+### Other Endpoints
+
+- GET /available-letters - Get all available starting letters
+- GET /stats - Get statistics about the name database
+- GET /tribes - Get available African tribes
+- GET /health - Check API health status
+
 ### 🎨 Example Use Cases
 
 - Generate placeholder names for user profiles or test data
@@ -88,6 +140,22 @@ python
 - Add name-generation features to apps for fun or creative writing assistance
 - Learn about names from different cultures and their meanings
 - Educational tools for exploring cultural diversity
+
+### Project Structure
+
+        random_nameapi/
+        ├── app/                      # Main application package
+        │   ├── core/                 # Core settings
+        │   ├── models/               # Data models
+        │   ├── routes/               # API endpoints
+        │   └── services/             # Business logic
+        ├── data/                     # Data files
+        │   ├── namedata.txt          # Regular names
+        │   └── african_names.json    # African names with details
+        ├── tests/                    # Unit tests
+        ├── requirements.txt          # Dependencies
+        ├── render.yaml               # Render deployment config
+        └── run.py                    # Entry point script
 
 ### 🔮 Future Improvements
 
@@ -99,34 +167,11 @@ python
  - Add name popularity statistics
  - Support combined filtering options
 
-### 🚀 Installation & Usage
-Prerequisites
+### 🔍 Troubleshooting
 
-- Python 3.7+
-- FastAPI
-- Uvicorn
-
-### Setup
-
-Clone the repository
-        
-        git clone https://github.com/yourusername/random-name-api.git
-        cd random-name-api
-
-Install dependencies
-    
-    pip install -r requirements.txt
-
-Run the application
-
-    uvicorn myapi:app --reload
-
-Open your browser and navigate to:
-
-    API: http://127.0.0.1:8000/randomname/a
-    Documentation: http://127.0.0.1:8000/docs
-
-
+- If you have installation issues, make sure you're using the correct virtual environment syntax for your shell
+- For Windows Git Bash users: Use source .venv/Scripts/activate with forward slashes
+- Make sure ports 8000 is not already in use by another application
 
 ### 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
