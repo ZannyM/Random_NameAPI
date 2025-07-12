@@ -183,9 +183,6 @@ python
 - For Windows Git Bash users: Use source .venv/Scripts/activate with forward slashes
 - Make sure ports 8000 is not already in use by another application
 
-### 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ### 🙏 Acknowledgements
 
 - Thanks to FastAPI for making API development so enjoyable
